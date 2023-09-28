@@ -1,0 +1,413 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnX</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <header>
+
+        
+        <nav class="navbar">
+            
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <img src="images/img3.jpg" alt="logo">
+                <ul class="menu">
+                    
+    
+                    <li class="menu-item"><a href="http://localhost:3001/">HOME</a></li>
+                    <li class="menu-item"><a href="http://localhost:3001/">MODULES</a></li>
+                    
+                    <li class="menu-item"><a href="http://localhost:3001/">CONTACT</a></li>
+                    <li class="menu-item"><a href="http://localhost:3001/">ABOUT</a></li>
+                    
+                </ul>
+                
+                
+
+            </div>
+            <div class="signbtn"><button id="redirect"><a href="signin.html">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                JOIN NOW</a></button>
+            </div>
+        </nav>
+        
+               
+        
+    </header>
+    
+    <div class="learnximg"></div>
+    <section class="middle">
+        <div class="text-box3">
+            <p class="vainsh-reappear">Money Making is a skill, <br> we will teach you how to do it</p>
+        </div>
+    </section>
+    
+
+    <div class="slogan" id="sentence">
+        <script>
+            const sentences = ["Ready to Escape the Matrix? Quit 9-5 jobs. JOIN the LearnX",
+                                "Your Success, Our Business.",
+                                "Where Innovation Meets Opportunity.",
+                                "Quality and Service Excellence.",
+                                "Turning Ideas Into Solutions.",
+                                "Empowering Your Future.",
+                                "Driven by Passion, Defined by Results.",
+                                "Building Trust, Delivering Excellence.",
+                                "Your Vision, Our Commitment.",
+                                "Striving for Excellence Every Day.",
+                                "Innovation Beyond Boundaries.",
+                                "Together We Achieve More.",
+                                "Customer-Centric, Quality-Driven.",
+                                "Redefining Possibilities.",
+                                "Inspiring Growth, Creating Value.",
+                                "Your Partner in Progress.",
+                                "Where Dreams Become Reality.",
+                                "Excellence in Every Endeavor.",
+                                "Investing in Your Success.",
+                                "Crafting Success Stories Together.",
+                                "Elevating Expectations, Exceeding Standards."];
+    
+            let sentenceIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 50; // Adjust the typing speed (milliseconds)
+    
+            function typeSentence() {
+                const sentenceElement = document.getElementById('sentence');
+                const currentSentence = sentences[sentenceIndex];
+                if (!isDeleting && charIndex < currentSentence.length) {
+                    sentenceElement.innerHTML += currentSentence.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeSentence, typingSpeed);
+                } else if (isDeleting && charIndex >= 0) {
+                    sentenceElement.innerHTML = currentSentence.substring(0, charIndex-1);
+                    charIndex--;
+                    setTimeout(typeSentence, typingSpeed / 2); // Faster erasing
+                } else {
+                    isDeleting = !isDeleting;
+                    sentenceIndex=(sentenceIndex+1)% sentences.length; //moving to next sentence
+
+                    setTimeout(typeSentence, 1000); // Pause before typing the next sentence
+                }
+            }
+    
+            // Start the typewriting effect when the page loads
+            window.onload = function () {
+                typeSentence();
+            }
+        </script>
+        
+    </div>
+    <script src="script.js"></script>
+    
+    
+    <div class ="whatyouwilllearn" >
+        <div class='typewritter'></div>
+        <h2 id1="sentence"></h2>
+
+    </div>
+    <script src="script.js"></script>
+
+    <!-- <div class="secondpage">
+        <img src="background/img5.jpg" alt="second page">
+
+    </div> -->
+    
+    <section class="sec-02">
+        <div class="container">
+            
+            <h2 class="main-title">WHAT IS lEARNX</h2>
+            
+
+            <div class="content">
+                <div class="image">
+                    <img src="images/moon.png" alt="">
+
+                </div>
+                <div class="text-box">
+                    <hr class="line">
+                    
+                    <p>"In a world of financial complexities, our mission is simple: to empower young minds with the knowledge and skills they need to achieve financial freedom. Welcome to LearnX, where we demystify finance and guide the next generation toward a brighter, financially secure future."</p>
+                    <hr class="line">
+                </div>
+
+            </div>
+            <div class="media-icons">
+                <a href="" class="icon" class="fab fa-facebook"></i></a>
+                <a href="" class="icon" class="fab fa-instagram"></i></a>
+                <a href="" class="icon" class="fab fa-linkedin"></i></a>
+                <a href="" class="icon" class="fab fa-twitter"></i></a>
+                    
+            </div>
+        
+        </div>
+        
+    </section>
+    <section class="sec-03">
+        <div class="container">
+            <h2 class="section-title">WHAT YOU WILL LEARN</h2>
+            <dic class="content">
+                <div class="image">
+                    
+
+                </div>
+                <div class="info">
+                    <section class="sec-05">
+                        <div class="box1">
+                            
+                            <h2><button>E-Commerce</button></h2>
+                                
+                            <hr class="line">
+
+                            <p>"E-commerce, short for electronic commerce, refers to the buying and selling of goods and services over the internet. It encompasses a wide range of online activities, from online retail stores and digital marketplaces to electronic payments and digital marketing strategies."</p>
+                        </div>
+                        <div class="box2">
+                            <h2><button>CopyWriting</button></h2>
+                            <hr class="line">
+                            <p>Copywriting is the art of using words to persuade, inform, and engage readers to take action. Effective copywriting is the secret sauce behind compelling advertisements, persuasive sales pages, and captivating content that drives results."</p>
+                        </div>
+                        <div class="box3">
+                            <h2><button>Stocks</button></h2>
+                            <hr class="line">
+                            <p>Stocks, also known as equities or shares, represent ownership in a company. When you own a stock, you are a shareholder or stockholder in that company</p>
+                        </div>
+                        <div class="box4">
+                            <h2><button>Crypto Investing</button></h2>
+                            <hr class="line">
+                            <p>Profit from the world’s highest-performing assets. We’ll focus on attacking crypto markets from 3 angles: Long-term, medium-term, and short-term.</p>
+                        </div>
+                        <div class="box5">
+                            <h2><button>Content Creation</button></h2>
+                            <hr class="line">
+                            <p>We live in a digital world. There are websites worth more than skyscrapers. Videos worth more than houses.
+                                We will teach you how to create valuable digital assets and how to sell them. Welcome to the digital age.</p>
+
+                        </div>
+                        
+                    </section>
+
+                    
+                </div>
+            </dic>
+
+        </div>
+    </section>
+    <section class="sec-04">
+        <div class="container">
+            <h2 class="main-title">FOR WHOM, LEARN<i>X</i> IS</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="img/part1.jpg" alt="">
+                    
+                    
+
+                </div>
+                <div class="info">
+                    <hr class="line">
+                    <section class="learnx">
+                        <div class="part1">
+                            
+                            <div class="text-box">
+                                <h3>People with Business material mind</h3>
+                            </div>
+                        </div>
+                        <div class="part1">
+                            
+                            <div class="text-box">
+                                <h3>Entrepreneur</h3>
+                            </div>
+                        </div>
+                        <div class="part1">
+                            
+                            <div class="text-box">
+                                <h3>Startups</h3>
+                            </div>
+                        </div>
+                        <div class="part1">
+                            
+                            <div class="text-box">
+                                <h3>Small company</h3>
+                            </div>
+                        </div>
+                        <div class="part1">
+                            
+                            <div class="text-box">
+                                <h3>Students who seek skills</h3>
+                            </div>
+                        </div>
+                        
+
+                            
+                        
+                    </section>
+                    <hr class="line">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="sec-07">
+        <dic class="container">
+            <h2 class="main-title">Private Network</h2>
+            <div class="content">
+                <div class="image">
+                        <img src="img/part3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <hr class="line">
+                    <section class="info-learnx">
+                        <div class="part1">
+                            <!-- <div class="text-box2">
+                                <h2>You will get access to video courses and well strutured tutorials covering everthing from the fundamentals of modern busines to niche money-making strategies.</h2>
+                                
+                            </div> -->
+                            
+                            <div class="process">
+                                <div class="box">
+                                    <h3>Make like-minded friends on your journey</h3>
+
+                                </div>
+                                <div class="box">
+                                    <h3>Master the skills you need to maximize your income</h3>
+
+                                </div>
+                                <div class="box">
+                                    <h3>Network with 100,000+ people</h3>
+
+                                </div>
+
+                            </div>
+                            
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </dic>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    
+    
+    <section class="sec-06">
+        <dic class="container">
+            <h2 class="main-title">what will i do Here?</h2>
+            <div class="content">
+                <div class="image">
+                        <img src="img/part4.jpg" alt="">
+                </div>
+                <div class="info">
+                    <hr class="line">
+                    <section class="info-learnx">
+                        <div class="part1">
+                            <div class="text-box2">
+                                <h2>You will get access to video courses and well strutured tutorials covering everthing from the fundamentals of modern busines to niche money-making strategies.</h2>
+                                <hr class="line">
+                            </div>
+                            <div class="process">
+                                <div class="box">
+                                    <h3>Easy-to-follow program for financial success</h3>
+
+                                </div>
+                                <div class="box">
+                                    <h3>Quickly learn new high income skills</h3>
+
+                                </div>
+                                <div class="box">
+                                    <h3>Hyper advanced learning platform</h3>
+
+                                </div>
+
+                            </div>
+                            
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </dic>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    
+    
+    <section class="escape">
+        <div class="joinnow">
+            <div class="aimages">
+                <img src="images/img3.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h1>READY TO LIVE? JOIN NOW</h1>
+                <h4>Our system has failed us, it's time to change the era, let the ear of happiness begins, let the era of frustration over, <strong>let it go</strong></h4>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400,       
+
+        });
+
+        ScrollReveal().reveal('.main-title, .section-title',{delay:300, origin: 'left'});
+        ScrollReveal().reveal('.sec-02 .image, .info', {delay:500, origin: 'bottom'});
+        ScrollReveal().reveal('.text-box', {delay:700, origin: 'right'});
+        ScrollReveal().reveal('media-icons i', {delay:500, origin: 'bottom', interval:200});
+        ScrollReveal().reveal('.sec-03 .image, .sec-04 .image', {delay:500, origin: 'top' });
+        ScrollReveal().reveal('.media-info li', {delay:500, origin: 'left', interval:200});
+        ScrollReveal().reveal('.learnximg', {delay:500, origin:'top'});
+        ScrollReveal().reveal('.signbtn', {delay:500, origin:'top'});
+        
+
+    </script>
+    
+    
+    
+    
+    
+</body>
+</html>

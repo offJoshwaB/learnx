@@ -1,0 +1,13 @@
+.app__body{
+  background: linear-gradient(to bottom, black);
+  object-fit: contain;
+}
+.app__body{
+  display: flex;
+
+}
+.App{
+  color: gray;
+
+}
+

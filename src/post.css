@@ -1,0 +1,48 @@
+.post{
+    background-color: transparent;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: green;
+    border: 1px solid green;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 620px;
+}
+.post__header{
+    
+    display: flex;
+
+    
+    
+}
+.post__info{
+    margin-top: -12px;
+    display: flex;
+    width: 620px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+
+
+.post__info >p{
+    margin-top: 25px;
+    font-size: 18px;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.post__body{
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.post__buttons{
+    display: flex;
+    gap: 60px;
+    justify-content: space-evenly;
+    
+    
+}
+
